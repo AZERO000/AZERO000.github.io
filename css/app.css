@@ -2963,12 +2963,6 @@ main >.inner {
 .social .item.email i {
   color: #55acd5;
 }
-.social .item.qq::before {
-  background-color: Q.pn;
-}
-.social .item.qq i {
-  color: Q.pn;
-}
 .social .item:focus i,
 .social .item:hover i {
   color: var(--grey-0);
