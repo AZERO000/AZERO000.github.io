@@ -2963,6 +2963,18 @@ main >.inner {
 .social .item.email i {
   color: #55acd5;
 }
+.social .item.qq::before {
+  background-color: images/QQ.pn;
+}
+.social .item.qq i {
+  color: images/QQ.pn;
+}
+.social .item.weixin::before {
+  background-color: images/wechat.pn;
+}
+.social .item.weixin i {
+  color: images/wechat.pn;
+}
 .social .item:focus i,
 .social .item:hover i {
   color: var(--grey-0);
