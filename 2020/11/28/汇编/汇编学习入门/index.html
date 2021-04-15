@@ -1,0 +1,500 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="Mr.Jin成神之路" href="http://azero000.github.io/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="Mr.Jin成神之路" href="http://azero000.github.io/atom.xml" />
+<link rel="alternate" type="application/json" title="Mr.Jin成神之路" href="http://azero000.github.io/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+
+  
+
+<link rel="canonical" href="http://azero000.github.io/2020/11/28/%E6%B1%87%E7%BC%96/%E6%B1%87%E7%BC%96%E5%AD%A6%E4%B9%A0%E5%85%A5%E9%97%A8/">
+
+
+<meta name="description" content="本周只了解了一些常用的X86汇编指令一、mov    类型：mov eax,ecx  即eax&#x3D;ecx 将ecx的值存入eax1.1  mov exa,[ebx]   —-将ebx值指示的内存地址中的四个字节传送到exa中1.2  mov [var],exb   —-将ebx的内容传送到var的值指示的地址中1.3  mov exa,[esi-4]  —将esi-4值指示的内存地址中的4个字节传送">
+<meta property="og:type" content="article">
+<meta property="og:title" content="汇编语言入门">
+<meta property="og:url" content="http://azero000.github.io/2020/11/28/%E6%B1%87%E7%BC%96/%E6%B1%87%E7%BC%96%E5%AD%A6%E4%B9%A0%E5%85%A5%E9%97%A8/index.html">
+<meta property="og:site_name" content="Mr.Jin成神之路">
+<meta property="og:description" content="本周只了解了一些常用的X86汇编指令一、mov    类型：mov eax,ecx  即eax&#x3D;ecx 将ecx的值存入eax1.1  mov exa,[ebx]   —-将ebx值指示的内存地址中的四个字节传送到exa中1.2  mov [var],exb   —-将ebx的内容传送到var的值指示的地址中1.3  mov exa,[esi-4]  —将esi-4值指示的内存地址中的4个字节传送">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-11-27T16:00:00.000Z">
+<meta property="article:modified_time" content="2021-04-11T09:54:01.258Z">
+<meta property="article:author" content="Mr.晋">
+<meta name="twitter:card" content="summary">
+
+
+  <title>
+汇编语言入门 - 汇编 |
+The Angel of Lucifer = Mr.Jin成神之路 = Hacker_AZERO TOP 1</title>
+<meta name="generator" content="Hexo 5.2.0"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">汇编语言入门
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="创建时间：2020-11-28 00:00:00">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">发表于</span>
+    <time itemprop="dateCreated datePublished" datetime="2020-11-28T00:00:00+08:00">2020-11-28</time>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="切换导航栏">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">The Angel of Lucifer</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gipeyhsblkj20zk0m81kx.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1giclx29mstj20zk0m8hdt.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gipeyvx1d4j20zk0m8hdt.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gipev1x5e4j20zk0m8b29.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1giph4fomxoj20zk0m8axp.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gipevuctzzj20zk0m84qp.jpg"></li>
+        </ul>
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">首页</a></span><i class="ic i-angle-right"></i>
+<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/%E6%B1%87%E7%BC%96/" itemprop="item" rel="index" title="分类于 汇编"><span itemprop="name">汇编</span></a>
+<meta itemprop="position" content="1" /></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-CN">
+  <link itemprop="mainEntityOfPage" href="http://azero000.github.io/2020/11/28/%E6%B1%87%E7%BC%96/%E6%B1%87%E7%BC%96%E5%AD%A6%E4%B9%A0%E5%85%A5%E9%97%A8/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/avatar.jpg">
+    <meta itemprop="name" content="Mr.晋">
+    <meta itemprop="description" content="Hacker_AZERO TOP 1, 我的个人站，知识交流，日常学习总结等。">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Mr.Jin成神之路">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <h1 id="本周只了解了一些常用的X86汇编指令"><a href="#本周只了解了一些常用的X86汇编指令" class="headerlink" title="本周只了解了一些常用的X86汇编指令"></a>本周只了解了一些常用的X86汇编指令</h1><p>一、mov    类型：mov eax,ecx  即eax=ecx 将ecx的值存入eax<br>1.1  mov exa,[ebx]   —-将ebx值指示的内存地址中的四个字节传送到exa中<br>1.2  mov [var],exb   —-将ebx的内容传送到var的值指示的地址中<br>1.3  mov exa,[esi-4]  —将esi-4值指示的内存地址中的4个字节传送到eax中<br>1.4  mov [esi+exa],cl –将cl的值传送到esi+eax的值指示的内存地址中<br>1.5  mov edx,[esi+4<em>ebx] –将esi+4</em>ebx值指示的内存中的4个字节传送到edx</p>
+<p>二、add   类型：add eax,ecx  即eax+=ecx 将eax的值加上ecx（相加后的结果保存到第一个操作符中去）</p>
+<p>三、sub   类型：sub eax,ecx   即eax-=ecx 将eax的值减去ecx（相减后的结果保存到第一个操作符中去）</p>
+<p>四、inc  类型： inc eax     即eax++</p>
+<p>五、dec  类型： dec eax     即eax–</p>
+<p>六、lea  类型： lea eax,[ecx+4]     即将ecx+4值放到exa中</p>
+
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">更新于</span>
+    <time title="修改时间：2021-04-11 17:54:01" itemprop="dateModified" datetime="2021-04-11T17:54:01+08:00">2021-04-11</time>
+  </span>
+</div>
+
+      
+<div class="reward">
+  <button><i class="ic i-heartbeat"></i> 赞赏</button>
+  <p>请我喝[茶]~(￣▽￣)~*</p>
+  <div id="qr">
+      
+      <div>
+        <img data-src="/images/wechatpay.png" alt="Mr.晋 微信支付">
+        <p>微信支付</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/alipay.png" alt="Mr.晋 支付宝">
+        <p>支付宝</p>
+      </div>
+  </div>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>本文作者： </strong>Mr.晋 <i class="ic i-at"><em>@</em></i>Mr.Jin成神之路
+  </li>
+  <li class="link">
+    <strong>本文链接：</strong>
+    <a href="http://azero000.github.io/2020/11/28/%E6%B1%87%E7%BC%96/%E6%B1%87%E7%BC%96%E5%AD%A6%E4%B9%A0%E5%85%A5%E9%97%A8/" title="汇编语言入门">http://azero000.github.io/2020/11/28/汇编/汇编学习入门/</a>
+  </li>
+  <li class="license">
+    <strong>版权声明： </strong>本站所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/2020/11/24/ctf-wp/hello-world/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gipey84bjtj20zk0m8hdt.jpg" title="Hello World">
+  <span class="type">上一篇</span>
+  <span class="category"><i class="ic i-flag"></i> </span>
+  <h3>Hello World</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+      
+
+  <a href="/2020/11/28/ctf-wp/123/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giclfdu6exj20zk0m87hw.jpg" title="本周 C语言练习代码">
+  <span class="type">下一篇</span>
+  <span class="category"><i class="ic i-flag"></i> </span>
+  <h3>本周 C语言练习代码</h3>
+  </a>
+
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="文章目录">
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9C%AC%E5%91%A8%E5%8F%AA%E4%BA%86%E8%A7%A3%E4%BA%86%E4%B8%80%E4%BA%9B%E5%B8%B8%E7%94%A8%E7%9A%84X86%E6%B1%87%E7%BC%96%E6%8C%87%E4%BB%A4"><span class="toc-number">1.</span> <span class="toc-text">本周只了解了一些常用的X86汇编指令</span></a></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="系列文章">
+        <ul>
+          <li class="active"><a href="/2020/11/28/%E6%B1%87%E7%BC%96/%E6%B1%87%E7%BC%96%E5%AD%A6%E4%B9%A0%E5%85%A5%E9%97%A8/" rel="bookmark" title="汇编语言入门">汇编语言入门</a></li>
+        </ul>
+      </div>
+      <div class="overview panel" data-title="站点概览">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="Mr.晋"
+      data-src="/images/avatar.jpg">
+  <p class="name" itemprop="name">Mr.晋</p>
+  <div class="description" itemprop="description">我的个人站，知识交流，日常学习总结等。</div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">27</span>
+        <span class="name">文章</span>
+      </a>
+    </div>
+    <div class="item categories">
+      <a href="/categories/">
+        <span class="count">3</span>
+        <span class="name">分类</span>
+      </a>
+    </div>
+    <div class="item tags">
+      <a href="/tags/">
+        <span class="count">3</span>
+        <span class="name">标签</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>首页</a>
+  </li>
+
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+        <a href="/2020/11/24/ctf-wp/hello-world/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a>
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+        <a href="/2020/11/28/ctf-wp/123/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a>
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+<div class="rpost pjax">
+  <h2>随机文章</h2>
+  <ul>
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2020/11/28/ctf-wp/123/" title="本周 C语言练习代码">本周 C语言练习代码</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/CTF/" title="分类于 CTF">CTF</a>
+</div>
+
+    <span><a href="/2021/03/05/ctf-wp/%E5%AF%92%E5%81%87wp/5/" title="寒假wp">寒假wp</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/CTF/" title="分类于 CTF">CTF</a>
+</div>
+
+    <span><a href="/2021/03/05/ctf-wp/%E5%AF%92%E5%81%87wp/8/" title="寒假wp">寒假wp</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/CTF/" title="分类于 CTF">CTF</a>
+</div>
+
+    <span><a href="/2021/03/05/ctf-wp/%E5%AF%92%E5%81%87wp/7/" title="寒假wp">寒假wp</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/CTF/" title="分类于 CTF">CTF</a>
+</div>
+
+    <span><a href="/2021/03/06/ctf-wp/%E5%AF%92%E5%81%87wp/13/" title="本周博客">本周博客</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/CTF/" title="分类于 CTF">CTF</a>
+</div>
+
+    <span><a href="/2021/04/07/ctf-wp/%E6%9C%AC%E5%91%A8%E5%8D%9A%E5%AE%A247/%E6%9C%AC%E5%91%A8/" title="本周blog">本周blog</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2020/11/24/ctf-wp/hello-world/" title="Hello World">Hello World</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2021/04/13/C%E8%AF%AD%E8%A8%80%E7%AE%97%E6%B3%95/%E6%A0%88%E7%9A%84%E8%AE%B2%E8%A7%A3/%E6%A0%88%E4%B9%8B%E7%B2%BE%E8%AE%B2/" title="未命名">未命名</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/CTF/" title="分类于 CTF">CTF</a>
+</div>
+
+    <span><a href="/2020/11/29/ctf-wp/2020.11%E6%9C%8829%E6%97%A5/" title="2020.11月29日练习">2020.11月29日练习</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/CTF/" title="分类于 CTF">CTF</a>
+</div>
+
+    <span><a href="/2020/11/28/ctf-wp/%E6%9C%AC%E5%91%A8re-wp/" title="本周re-wp">本周re-wp</a></span>
+  </li>
+
+  </ul>
+</div>
+<div>
+  <h2>最新评论</h2>
+  <ul class="leancloud-recent-comment"></ul>
+</div>
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 2010 – 
+    <span itemprop="copyrightYear">2021</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Mr.晋 @ The Angel of Lucifer</span>
+  </div>
+  <div class="powered-by">
+    基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: '2020/11/28/汇编/汇编学习入门/',
+    favicon: {
+      show: "（●´3｀●）やれやれだぜ",
+      hide: "(´Д｀)大変だ！"
+    },
+    search : {
+      placeholder: "文章搜索",
+      empty: "关于 「 ${query} 」，什么也没搜到",
+      stats: "${time} ms 内找到 ${hits} 条结果"
+    },
+    valine: true,fancybox: true,copyright: '复制成功，转载请遵守 <i class="ic i-creative-commons"></i>BY-NC-SA 协议。',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+
+
+</body>
+</html>
