@@ -2927,11 +2927,29 @@ main >.inner {
   top: -10%;
   left: -10%;
 }
-.social .item.::before {
-  background-color: ;
+.social .item.github::before {
+  background-color: ttps://github.com/AZERO00;
 }
-.social .item. i {
-  color: ;
+.social .item.github i {
+  color: ttps://github.com/AZERO00;
+}
+.social .item.qq::before {
+  background-color: images/qq.jp;
+}
+.social .item.qq i {
+  color: images/qq.jp;
+}
+.social .item.weixin::before {
+  background-color: images/wechat.pn;
+}
+.social .item.weixin i {
+  color: images/wechat.pn;
+}
+.social .item.mail::before {
+  background-color: ailto:1420928174@qq.co;
+}
+.social .item.mail i {
+  color: ailto:1420928174@qq.co;
 }
 .social .item:focus i,
 .social .item:hover i {
