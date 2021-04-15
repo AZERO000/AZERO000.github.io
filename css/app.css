@@ -2928,28 +2928,52 @@ main >.inner {
   left: -10%;
 }
 .social .item.github::before {
-  background-color: ttps://github.com/AZERO00;
+  background-color: #191717;
 }
 .social .item.github i {
-  color: ttps://github.com/AZERO00;
+  color: #191717;
+}
+.social .item.google::before {
+  background-color: oogl;
+}
+.social .item.google i {
+  color: oogl;
+}
+.social .item.zhihu::before {
+  background-color: #1e88e5;
+}
+.social .item.zhihu i {
+  color: #1e88e5;
+}
+.social .item.music::before {
+  background-color: #e60026;
+}
+.social .item.music i {
+  color: #e60026;
+}
+.social .item.about::before {
+  background-color: #3b5998;
+}
+.social .item.about i {
+  color: #3b5998;
+}
+.social .item.email::before {
+  background-color: #55acd5;
+}
+.social .item.email i {
+  color: #55acd5;
 }
 .social .item.qq::before {
-  background-color: images/qq.jp;
+  background-color: images/QQ.jp;
 }
 .social .item.qq i {
-  color: images/qq.jp;
+  color: images/QQ.jp;
 }
 .social .item.weixin::before {
   background-color: images/wechat.pn;
 }
 .social .item.weixin i {
   color: images/wechat.pn;
-}
-.social .item.mail::before {
-  background-color: ailto:1420928174@qq.co;
-}
-.social .item.mail i {
-  color: ailto:1420928174@qq.co;
 }
 .social .item:focus i,
 .social .item:hover i {
