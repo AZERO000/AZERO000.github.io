@@ -2939,17 +2939,17 @@ main >.inner {
 .social .item.google i {
   color: oogl;
 }
-.social .item.twitter::before {
-  background-color: #00aff0;
-}
-.social .item.twitter i {
-  color: #00aff0;
-}
 .social .item.zhihu::before {
   background-color: #1e88e5;
 }
 .social .item.zhihu i {
   color: #1e88e5;
+}
+.social .item.music::before {
+  background-color: #e60026;
+}
+.social .item.music i {
+  color: #e60026;
 }
 .social .item.about::before {
   background-color: #3b5998;
@@ -2962,6 +2962,12 @@ main >.inner {
 }
 .social .item.email i {
   color: #55acd5;
+}
+.social .item.qq::before {
+  background-color: Q.pn;
+}
+.social .item.qq i {
+  color: Q.pn;
 }
 .social .item:focus i,
 .social .item:hover i {
