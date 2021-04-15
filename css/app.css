@@ -2933,17 +2933,35 @@ main >.inner {
 .social .item.github i {
   color: #191717;
 }
+.social .item.google::before {
+  background-color: oogl;
+}
+.social .item.google i {
+  color: oogl;
+}
+.social .item.twitter::before {
+  background-color: #00aff0;
+}
+.social .item.twitter i {
+  color: #00aff0;
+}
+.social .item.zhihu::before {
+  background-color: #1e88e5;
+}
+.social .item.zhihu i {
+  color: #1e88e5;
+}
+.social .item.about::before {
+  background-color: #3b5998;
+}
+.social .item.about i {
+  color: #3b5998;
+}
 .social .item.email::before {
   background-color: #55acd5;
 }
 .social .item.email i {
   color: #55acd5;
-}
-.social .item.QQ::before {
-  background-color: Q.pn;
-}
-.social .item.QQ i {
-  color: Q.pn;
 }
 .social .item:focus i,
 .social .item:hover i {
