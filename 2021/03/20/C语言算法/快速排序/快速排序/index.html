@@ -47,7 +47,7 @@
 <meta property="og:image" content="http://azero000.github.io/2021/03/20/C%E8%AF%AD%E8%A8%80%E7%AE%97%E6%B3%95/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F/q10.png">
 <meta property="og:image" content="http://azero000.github.io/2021/03/20/C%E8%AF%AD%E8%A8%80%E7%AE%97%E6%B3%95/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F/q11.png">
 <meta property="article:published_time" content="2021-03-19T16:00:00.000Z">
-<meta property="article:modified_time" content="2021-04-11T16:33:40.079Z">
+<meta property="article:modified_time" content="2021-04-17T10:16:02.803Z">
 <meta property="article:author" content="Mr.晋">
 <meta property="article:tag" content="指点江山，激扬文字">
 <meta name="twitter:card" content="summary">
@@ -125,12 +125,12 @@ The Angel of Lucifer = Mr.Jin成神之路 = Hacker_AZERO TOP 1</title>
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclhpw3lwj20zk0m8gvw.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipetlbztpj20zk0m84qp.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipetv6p75j20zk0m8x6p.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipeun65urj20zk0m81ii.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giciuja1j1j20zk0m8kjl.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipexbei4hj20zk0m8npd.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipevo9j1jj20zk0m8e81.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gicm07ih54j20zk0m84qp.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclh5u05ej20zk0m87df.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipewf5l51j20zk0m8b29.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipeybxm1pj20zk0m8niv.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclfw2t96j20zk0m8x6p.jpg"></li>
         </ul>
       </div>
     </header>
@@ -221,6 +221,9 @@ The Angel of Lucifer = Mr.Jin成神之路 = Hacker_AZERO TOP 1</title>
 </ol>
 <p>这里附上第二种方法的代码</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">void quicksort2(int arr[], int left, int right)</span><br><span class="line">&#123;</span><br><span class="line">    int tmp &#x3D; arr[left];                 &#x2F;&#x2F;基准</span><br><span class="line">    int i &#x3D; left;</span><br><span class="line">    int j &#x3D; right;</span><br><span class="line">    while (i !&#x3D; j)</span><br><span class="line">    &#123;</span><br><span class="line">        while (arr[j] &gt;&#x3D; tmp &amp;&amp; i&lt;j)</span><br><span class="line">        &#123;</span><br><span class="line">            j--;</span><br><span class="line">        &#125;</span><br><span class="line">        while (arr[i] &lt;&#x3D; tmp &amp;&amp; i&lt;j)</span><br><span class="line">        &#123;</span><br><span class="line">            i++;</span><br><span class="line">        &#125;</span><br><span class="line">        int temp &#x3D; arr[i];</span><br><span class="line">        arr[i] &#x3D; arr[j];</span><br><span class="line">        arr[j] &#x3D; temp;</span><br><span class="line">    &#125;</span><br><span class="line">    int temp2 &#x3D; arr[left];</span><br><span class="line">    arr[left] &#x3D; arr[i];</span><br><span class="line">    arr[i] &#x3D; temp2;</span><br><span class="line">    if (left &lt; right)           &#x2F;&#x2F;这个if条件也不能省略，如果这个if省略的话，会                                   造成大bug，这一点本人深</span><br><span class="line">    &#123;                          &#x2F;&#x2F;有体会，bug就是当3,13,17时，到最后                                          i&#x3D;j&#x3D;left&#x3D;0，会一直循环，导致栈溢出</span><br><span class="line">        quicksort2(arr, left, i);     &#x2F;&#x2F;这个必须是i，不能是i-1，不然如果                                            第一个就是最小的i&#x3D;i-1&#x3D;-1</span><br><span class="line">        quicksort2(arr, i + 1, right);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    int arr[12] &#x3D; &#123; 23,45,17,11,13,89,72,26,3,17,11,13 &#125;;</span><br><span class="line">    int i &#x3D; 0;</span><br><span class="line">    int right &#x3D; sizeof(arr) &#x2F; sizeof(arr[0]) - 1;</span><br><span class="line">    int left &#x3D; 0;</span><br><span class="line">    quicksort2(arr, left, right);</span><br><span class="line"></span><br><span class="line">    for (i &#x3D; 0; i &lt; right + 1; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        printf(&quot;%d &quot;, arr[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>以上代码递归可以用一个函数写出，比较符合审美</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;iostream&gt;</span><br><span class="line">#include &lt;cstdlib&gt;     &#x2F;&#x2F;rand函数的头文件</span><br><span class="line"></span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">void quicksort(int arr[], int, int);</span><br><span class="line">int partition(int arr[], int, int);</span><br><span class="line"></span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">	srand(time(0));</span><br><span class="line">	int n;</span><br><span class="line">	cout &lt;&lt; &quot;请输入想排序的个数：&quot;;</span><br><span class="line">	cin &gt;&gt; n;</span><br><span class="line">	int low, high;</span><br><span class="line">	cout &lt;&lt; &quot;请输入下限：&quot;;</span><br><span class="line">	cin &gt;&gt; low;</span><br><span class="line">	cout &lt;&lt; &quot;请输入上限：&quot;;</span><br><span class="line">	cin &gt;&gt; high;</span><br><span class="line">	int* arr &#x3D; new int[n];              &#x2F;&#x2F;创建有n个数的数组</span><br><span class="line">	int i &#x3D; 0;</span><br><span class="line">	for (i &#x3D; 0; i &lt; n; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		arr[i] &#x3D; (int)(rand() % (high-low+1)+low);</span><br><span class="line">	&#125;</span><br><span class="line">	quicksort(arr, 0, n-1);</span><br><span class="line">	for (int i &#x3D; 0; i &lt; n; i++)        &#x2F;&#x2F;打印排序之后的数组</span><br><span class="line">	&#123;</span><br><span class="line">		cout &lt;&lt; arr[i] &lt;&lt; &quot; &quot;;</span><br><span class="line">	&#125;</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void quicksort(int arr[], int startIndex, int endIndex)      &#x2F;&#x2F;总部框架的递归</span><br><span class="line">&#123;</span><br><span class="line">	if (startIndex &lt; endIndex)</span><br><span class="line">	&#123;</span><br><span class="line">		int pivot &#x3D; partition(arr, startIndex, endIndex);</span><br><span class="line">		quicksort(arr, startIndex, pivot);</span><br><span class="line">		quicksort(arr, pivot + 1, endIndex);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int partition(int arr[], int startIndex, int endIndex)       &#x2F;&#x2F;分治思想的实现--指针交换法</span><br><span class="line">&#123;</span><br><span class="line">	int pivot &#x3D; arr[startIndex];            &#x2F;&#x2F;设置第一个位置为基准</span><br><span class="line">	int left &#x3D; startIndex;</span><br><span class="line">	int right &#x3D; endIndex;</span><br><span class="line">	int index &#x3D; startIndex;         &#x2F;&#x2F;坑的位置</span><br><span class="line">	while (left &lt; right)           &#x2F;&#x2F;大循环</span><br><span class="line">	&#123;</span><br><span class="line">		while (right &gt; left &amp;&amp; arr[right] &gt;&#x3D; pivot)</span><br><span class="line">		&#123;</span><br><span class="line">			right--;</span><br><span class="line">		&#125;</span><br><span class="line">		while (left &lt; right &amp;&amp; arr[left] &lt;&#x3D; pivot)</span><br><span class="line">		&#123;</span><br><span class="line">			left++;</span><br><span class="line">		&#125;</span><br><span class="line">		int tmp &#x3D; arr[right];</span><br><span class="line">		arr[right] &#x3D; arr[left];</span><br><span class="line">		arr[left] &#x3D; tmp;</span><br><span class="line">	&#125;</span><br><span class="line">	int tmp &#x3D; arr[startIndex];</span><br><span class="line">	arr[startIndex] &#x3D; arr[left];</span><br><span class="line">	arr[left] &#x3D; tmp;</span><br><span class="line">	return left;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>谢谢大家的浏览！！！</p>
 
   </div>
@@ -233,7 +236,7 @@ The Angel of Lucifer = Mr.Jin成神之路 = Hacker_AZERO TOP 1</title>
       <i class="ic i-calendar-check"></i>
     </span>
     <span class="text">更新于</span>
-    <time title="修改时间：2021-04-12 00:33:40" itemprop="dateModified" datetime="2021-04-12T00:33:40+08:00">2021-04-12</time>
+    <time title="修改时间：2021-04-17 18:16:02" itemprop="dateModified" datetime="2021-04-17T18:16:02+08:00">2021-04-17</time>
   </span>
   <span id="2021/03/20/C语言算法/快速排序/快速排序/" class="item leancloud_visitors" data-flag-title="快速排序算法" title="阅读次数">
       <span class="icon">
@@ -291,7 +294,7 @@ The Angel of Lucifer = Mr.Jin成神之路 = Hacker_AZERO TOP 1</title>
     <div class="item left">
       
 
-  <a href="/2021/03/06/ctf-wp/%E5%AF%92%E5%81%87wp/13/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva2.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giclhpw3lwj20zk0m8gvw.jpg" title="本周博客">
+  <a href="/2021/03/06/ctf-wp/%E5%AF%92%E5%81%87wp/13/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva2.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gipewr8iypj20zk0m8b29.jpg" title="本周博客">
   <span class="type">上一篇</span>
   <span class="category"><i class="ic i-flag"></i> CTF</span>
   <h3>本周博客</h3>
@@ -301,7 +304,7 @@ The Angel of Lucifer = Mr.Jin成神之路 = Hacker_AZERO TOP 1</title>
     <div class="item right">
       
 
-  <a href="/2021/03/20/C%E8%AF%AD%E8%A8%80%E7%AE%97%E6%B3%95/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva2.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gipetlbztpj20zk0m84qp.jpg" title="冒泡排序算法">
+  <a href="/2021/03/20/C%E8%AF%AD%E8%A8%80%E7%AE%97%E6%B3%95/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva2.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gipexe4oykj20zk0m87ji.jpg" title="冒泡排序算法">
   <span class="type">下一篇</span>
   <span class="category"><i class="ic i-flag"></i> C语言</span>
   <h3>冒泡排序算法</h3>
@@ -426,10 +429,19 @@ The Angel of Lucifer = Mr.Jin成神之路 = Hacker_AZERO TOP 1</title>
   <li class="item">
     
 <div class="breadcrumb">
+</div>
+
+    <span><a href="/2020/11/24/ctf-wp/hello-world/" title="Hello World">Hello World</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
 <a href="/categories/CTF/" title="分类于 CTF">CTF</a>
 </div>
 
-    <span><a href="/2021/03/06/ctf-wp/%E5%AF%92%E5%81%87wp/12/" title="寒假wp">寒假wp</a></span>
+    <span><a href="/2021/03/05/ctf-wp/%E5%AF%92%E5%81%87wp/9/" title="寒假wp">寒假wp</a></span>
   </li>
 
       
@@ -456,10 +468,10 @@ The Angel of Lucifer = Mr.Jin成神之路 = Hacker_AZERO TOP 1</title>
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/CTF/" title="分类于 CTF">CTF</a>
+<a href="/categories/C%E8%AF%AD%E8%A8%80/" title="分类于 C语言">C语言</a>
 </div>
 
-    <span><a href="/2021/03/05/ctf-wp/%E5%AF%92%E5%81%87wp/7/" title="寒假wp">寒假wp</a></span>
+    <span><a href="/2020/12/02/C%E8%AF%AD%E8%A8%80%E7%AE%97%E6%B3%95/12%E6%9C%882%E6%97%A5/" title="2020.12月02日练习">2020.12月02日练习</a></span>
   </li>
 
       
@@ -469,7 +481,17 @@ The Angel of Lucifer = Mr.Jin成神之路 = Hacker_AZERO TOP 1</title>
 <a href="/categories/CTF/" title="分类于 CTF">CTF</a>
 </div>
 
-    <span><a href="/2021/03/25/ctf-wp/3%E6%9C%8819%E6%97%A5blog/%E6%9C%AC%E5%91%A8blog/" title="本周blog">本周blog</a></span>
+    <span><a href="/2021/03/06/ctf-wp/%E5%AF%92%E5%81%87wp/13/" title="本周博客">本周博客</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/C%E8%AF%AD%E8%A8%80/" title="分类于 C语言">C语言</a>
+</div>
+
+    <span><a href="/2021/03/20/C%E8%AF%AD%E8%A8%80%E7%AE%97%E6%B3%95/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F/" title="快速排序算法">快速排序算法</a></span>
   </li>
 
       
@@ -479,7 +501,7 @@ The Angel of Lucifer = Mr.Jin成神之路 = Hacker_AZERO TOP 1</title>
 <a href="/categories/CTF/" title="分类于 CTF">CTF</a>
 </div>
 
-    <span><a href="/2021/03/05/ctf-wp/%E5%AF%92%E5%81%87wp/4/" title="寒假wp">寒假wp</a></span>
+    <span><a href="/2021/03/05/ctf-wp/%E5%AF%92%E5%81%87wp/3/" title="寒假wp">寒假wp</a></span>
   </li>
 
       
@@ -489,7 +511,7 @@ The Angel of Lucifer = Mr.Jin成神之路 = Hacker_AZERO TOP 1</title>
 <a href="/categories/CTF/" title="分类于 CTF">CTF</a>
 </div>
 
-    <span><a href="/2020/11/28/ctf-wp/%E6%9C%AC%E5%91%A8re-wp/" title="本周re-wp">本周re-wp</a></span>
+    <span><a href="/2021/03/05/ctf-wp/%E5%AF%92%E5%81%87wp/1/" title="寒假wp">寒假wp</a></span>
   </li>
 
       
@@ -499,27 +521,7 @@ The Angel of Lucifer = Mr.Jin成神之路 = Hacker_AZERO TOP 1</title>
 <a href="/categories/CTF/" title="分类于 CTF">CTF</a>
 </div>
 
-    <span><a href="/2021/03/06/ctf-wp/%E5%AF%92%E5%81%87wp/11/" title="寒假wp">寒假wp</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/CTF/" title="分类于 CTF">CTF</a>
-</div>
-
-    <span><a href="/2021/04/07/ctf-wp/%E6%9C%AC%E5%91%A8%E5%8D%9A%E5%AE%A247/%E6%9C%AC%E5%91%A8/" title="本周blog">本周blog</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/CTF/" title="分类于 CTF">CTF</a>
-</div>
-
-    <span><a href="/2021/03/05/ctf-wp/%E5%AF%92%E5%81%87wp/6/" title="寒假wp">寒假wp</a></span>
+    <span><a href="/2020/12/06/ctf-wp/12-5-re-wp/" title="12.5 re-wp">12.5 re-wp</a></span>
   </li>
 
   </ul>
