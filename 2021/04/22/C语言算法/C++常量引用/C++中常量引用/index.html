@@ -25,25 +25,25 @@
 
   
 
-<link rel="canonical" href="http://azero000.github.io/2021/04/22/a/">
+<link rel="canonical" href="http://azero000.github.io/2021/04/22/C%E8%AF%AD%E8%A8%80%E7%AE%97%E6%B3%95/C++%E5%B8%B8%E9%87%8F%E5%BC%95%E7%94%A8/C++%E4%B8%AD%E5%B8%B8%E9%87%8F%E5%BC%95%E7%94%A8/">
 
 
-<meta name="description" content="生成随机密码">
+<meta name="description" content="常量引用引用 引用是对象的别名，她本身不是对象，只是已经存在对象的另一个名字；所有对引用的操作均是对它所代表的对象的操作。  初始化：定义一个引用的时候，必须初始化，其初始化值必须是一个对象，引用一旦初始化完成，将始终和他的初始值对象绑在一起  例如： int a&#x3D;1;        int &amp;ra&#x3D;a;        ra++;  &#x2F;&#x2F;现在ra是a的别名，对ra的操作，其实就是对a的操作">
 <meta property="og:type" content="article">
-<meta property="og:title" content="a">
-<meta property="og:url" content="http://azero000.github.io/2021/04/22/a/index.html">
+<meta property="og:title" content="C++常量引用引发的问题">
+<meta property="og:url" content="http://azero000.github.io/2021/04/22/C%E8%AF%AD%E8%A8%80%E7%AE%97%E6%B3%95/C++%E5%B8%B8%E9%87%8F%E5%BC%95%E7%94%A8/C++%E4%B8%AD%E5%B8%B8%E9%87%8F%E5%BC%95%E7%94%A8/index.html">
 <meta property="og:site_name" content="Mr.Jin成神之路">
-<meta property="og:description" content="生成随机密码">
+<meta property="og:description" content="常量引用引用 引用是对象的别名，她本身不是对象，只是已经存在对象的另一个名字；所有对引用的操作均是对它所代表的对象的操作。  初始化：定义一个引用的时候，必须初始化，其初始化值必须是一个对象，引用一旦初始化完成，将始终和他的初始值对象绑在一起  例如： int a&#x3D;1;        int &amp;ra&#x3D;a;        ra++;  &#x2F;&#x2F;现在ra是a的别名，对ra的操作，其实就是对a的操作">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-04-22T14:20:48.000Z">
-<meta property="article:modified_time" content="2021-04-22T14:21:30.345Z">
+<meta property="article:modified_time" content="2021-04-23T08:01:02.734Z">
 <meta property="article:author" content="Mr.晋">
 <meta property="article:tag" content="指点江山，激扬文字">
 <meta name="twitter:card" content="summary">
 
 
   <title>
-a |
+C++常量引用引发的问题 |
 The Angel of Lucifer = Mr.Jin成神之路 = Hacker_AZERO TOP 1</title>
 <meta name="generator" content="Hexo 5.2.0"></head>
 <body itemscope itemtype="http://schema.org/WebPage">
@@ -71,7 +71,7 @@ The Angel of Lucifer = Mr.Jin成神之路 = Hacker_AZERO TOP 1</title>
         <div id="brand">
           <div class="pjax">
           
-  <h1 itemprop="name headline">a
+  <h1 itemprop="name headline">C++常量引用引发的问题
   </h1>
   
 <div class="meta">
@@ -113,12 +113,12 @@ The Angel of Lucifer = Mr.Jin成神之路 = Hacker_AZERO TOP 1</title>
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1giclxxcb6rj20zk0m8b29.jpg"></li>
-          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1giciusoyjnj219g0u0x56.jpg"></li>
-          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1giclj61ylzj20zk0m8b29.jpg"></li>
-          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gicm0fdw5cj20zk0m8hdt.jpg"></li>
-          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gipeyvx1d4j20zk0m8hdt.jpg"></li>
-          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gicliierfjj20zk0m8npd.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1giciundwu5j20zk0m8n9e.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gicm0n457cj20zk0m8e81.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gipeybxm1pj20zk0m8niv.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1giclgi503lj20zk0m8hdt.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1giph4baakhj20zk0m8h5q.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gicitzannuj20zk0m8b29.jpg"></li>
         </ul>
       </div>
     </header>
@@ -147,7 +147,7 @@ The Angel of Lucifer = Mr.Jin成神之路 = Hacker_AZERO TOP 1</title>
 </div>
 
     <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-CN">
-  <link itemprop="mainEntityOfPage" href="http://azero000.github.io/2021/04/22/a/">
+  <link itemprop="mainEntityOfPage" href="http://azero000.github.io/2021/04/22/C%E8%AF%AD%E8%A8%80%E7%AE%97%E6%B3%95/C++%E5%B8%B8%E9%87%8F%E5%BC%95%E7%94%A8/C++%E4%B8%AD%E5%B8%B8%E9%87%8F%E5%BC%95%E7%94%A8/">
 
   <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="image" content="/images/avatar.jpg">
@@ -162,7 +162,22 @@ The Angel of Lucifer = Mr.Jin成神之路 = Hacker_AZERO TOP 1</title>
   <div class="body md" itemprop="articleBody">
     
 
-    <h1 id="生成随机密码"><a href="#生成随机密码" class="headerlink" title="生成随机密码"></a>生成随机密码</h1>
+    <h1 id="常量引用"><a href="#常量引用" class="headerlink" title="常量引用"></a>常量引用</h1><h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><ol>
+<li><p>引用是对象的别名，她本身不是对象，只是已经存在对象的另一个名字；所有对引用的操作均是对它所代表的对象的操作。</p>
+</li>
+<li><p>初始化：<br>定义一个引用的时候，必须初始化，其初始化值必须是一个对象，引用一旦初始化完成，将始终和他的初始值对象绑在一起</p>
+<pre><code> 例如： int a=1;
+       int &amp;ra=a;
+       ra++;  //现在ra是a的别名，对ra的操作，其实就是对a的操作
+ 错例：（1）int &amp;ra=10;   //初始化值必须是一个对象
+      （2）double d=3.14;
+          int &amp;rd=d;     //类型不匹配</code></pre>
+</li>
+</ol>
+<h2 id="常量引用-1"><a href="#常量引用-1" class="headerlink" title="常量引用"></a>常量引用</h2><ol>
+<li>初始化：与前边普通引用的初始化不同，常量引用允许用任意表达式作为其初始值，只要该表达式的结果可以转换成引用的类型即可。</li>
+</ol>
+
   </div>
 
    <footer>
@@ -173,9 +188,9 @@ The Angel of Lucifer = Mr.Jin成神之路 = Hacker_AZERO TOP 1</title>
       <i class="ic i-calendar-check"></i>
     </span>
     <span class="text">更新于</span>
-    <time title="修改时间：2021-04-22 22:21:30" itemprop="dateModified" datetime="2021-04-22T22:21:30+08:00">2021-04-22</time>
+    <time title="修改时间：2021-04-23 16:01:02" itemprop="dateModified" datetime="2021-04-23T16:01:02+08:00">2021-04-23</time>
   </span>
-  <span id="2021/04/22/a/" class="item leancloud_visitors" data-flag-title="a" title="阅读次数">
+  <span id="2021/04/22/C语言算法/C++常量引用/C++中常量引用/" class="item leancloud_visitors" data-flag-title="C++常量引用引发的问题" title="阅读次数">
       <span class="icon">
         <i class="ic i-eye"></i>
       </span>
@@ -212,7 +227,7 @@ The Angel of Lucifer = Mr.Jin成神之路 = Hacker_AZERO TOP 1</title>
   </li>
   <li class="link">
     <strong>本文链接：</strong>
-    <a href="http://azero000.github.io/2021/04/22/a/" title="a">http://azero000.github.io/2021/04/22/a/</a>
+    <a href="http://azero000.github.io/2021/04/22/C%E8%AF%AD%E8%A8%80%E7%AE%97%E6%B3%95/C++%E5%B8%B8%E9%87%8F%E5%BC%95%E7%94%A8/C++%E4%B8%AD%E5%B8%B8%E9%87%8F%E5%BC%95%E7%94%A8/" title="C++常量引用引发的问题">http://azero000.github.io/2021/04/22/C语言算法/C++常量引用/C++中常量引用/</a>
   </li>
   <li class="license">
     <strong>版权声明： </strong>本站所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 许可协议。转载请注明出处！
@@ -231,7 +246,7 @@ The Angel of Lucifer = Mr.Jin成神之路 = Hacker_AZERO TOP 1</title>
     <div class="item left">
       
 
-  <a href="/2021/04/18/ctf-wp/base64%E5%92%8Cpython%E4%B8%AD%E7%9A%84base/python%E5%92%8Cbase64%E7%9A%84%E7%BA%A0%E7%BC%A0%EF%BC%81/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giclffsa1cj20zk0m811l.jpg" title="python和base64">
+  <a href="/2021/04/18/ctf-wp/base64%E5%92%8Cpython%E4%B8%AD%E7%9A%84base/python%E5%92%8Cbase64%E7%9A%84%E7%BA%A0%E7%BC%A0%EF%BC%81/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giclhfehz7j20zk0m8u0x.jpg" title="python和base64">
   <span class="type">上一篇</span>
   <span class="category"><i class="ic i-flag"></i> CTF</span>
   <h3>python和base64</h3>
@@ -239,6 +254,14 @@ The Angel of Lucifer = Mr.Jin成神之路 = Hacker_AZERO TOP 1</title>
 
     </div>
     <div class="item right">
+      
+
+  <a href="/2021/04/23/b/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gipevarprfj20zk0m8npd.jpg" title="b">
+  <span class="type">下一篇</span>
+  <span class="category"><i class="ic i-flag"></i> </span>
+  <h3>b</h3>
+  </a>
+
     </div>
 </div>
 
@@ -255,7 +278,7 @@ The Angel of Lucifer = Mr.Jin成神之路 = Hacker_AZERO TOP 1</title>
   <div class="panels">
     <div class="inner">
       <div class="contents panel pjax" data-title="文章目录">
-          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%94%9F%E6%88%90%E9%9A%8F%E6%9C%BA%E5%AF%86%E7%A0%81"><span class="toc-number">1.</span> <span class="toc-text">生成随机密码</span></a></li></ol>
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%B8%B8%E9%87%8F%E5%BC%95%E7%94%A8"><span class="toc-number">1.</span> <span class="toc-text">常量引用</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%95%E7%94%A8"><span class="toc-number">1.1.</span> <span class="toc-text">引用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B8%B8%E9%87%8F%E5%BC%95%E7%94%A8-1"><span class="toc-number">1.2.</span> <span class="toc-text">常量引用</span></a></li></ol></li></ol>
       </div>
       <div class="related panel pjax" data-title="系列文章">
       </div>
@@ -270,7 +293,7 @@ The Angel of Lucifer = Mr.Jin成神之路 = Hacker_AZERO TOP 1</title>
 <nav class="state">
     <div class="item posts">
       <a href="/archives/">
-        <span class="count">35</span>
+        <span class="count">36</span>
         <span class="name">文章</span>
       </a>
     </div>
@@ -328,10 +351,12 @@ The Angel of Lucifer = Mr.Jin成神之路 = Hacker_AZERO TOP 1</title>
 
   <ul id="quick">
     <li class="prev pjax">
+        <a href="/2021/04/18/ctf-wp/base64%E5%92%8Cpython%E4%B8%AD%E7%9A%84base/python%E5%92%8Cbase64%E7%9A%84%E7%BA%A0%E7%BC%A0%EF%BC%81/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a>
     </li>
     <li class="up"><i class="ic i-arrow-up"></i></li>
     <li class="down"><i class="ic i-arrow-down"></i></li>
     <li class="next pjax">
+        <a href="/2021/04/23/b/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a>
     </li>
     <li class="percent"></li>
   </ul>
@@ -356,6 +381,56 @@ The Angel of Lucifer = Mr.Jin成神之路 = Hacker_AZERO TOP 1</title>
 <a href="/categories/CTF/" title="分类于 CTF">CTF</a>
 </div>
 
+    <span><a href="/2021/03/05/ctf-wp/%E5%AF%92%E5%81%87wp/10/" title="寒假wp">寒假wp</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/CTF/" title="分类于 CTF">CTF</a>
+</div>
+
+    <span><a href="/2021/04/07/ctf-wp/%E6%9C%AC%E5%91%A8%E5%8D%9A%E5%AE%A247/%E6%9C%AC%E5%91%A8/" title="本周blog">本周blog</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/CTF/" title="分类于 CTF">CTF</a>
+</div>
+
+    <span><a href="/2021/04/18/ctf-wp/4%E6%9C%8818%E6%97%A5/4018/" title="4月18日份">4月18日份</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/CTF/" title="分类于 CTF">CTF</a>
+</div>
+
+    <span><a href="/2021/03/06/ctf-wp/%E5%AF%92%E5%81%87wp/13/" title="本周博客">本周博客</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E6%B1%87%E7%BC%96/" title="分类于 汇编">汇编</a>
+</div>
+
+    <span><a href="/2021/04/16/%E6%B1%87%E7%BC%96/IDA%E5%B8%B8%E8%A7%81%E6%B1%87%E7%BC%96%E6%8C%87%E4%BB%A4-%E4%B8%8A%E7%AF%87/" title="IDA中常见汇编指令--上篇">IDA中常见汇编指令--上篇</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/CTF/" title="分类于 CTF">CTF</a>
+</div>
+
     <span><a href="/2021/03/05/ctf-wp/%E5%AF%92%E5%81%87wp/2/" title="寒假wp-2">寒假wp-2</a></span>
   </li>
 
@@ -363,10 +438,9 @@ The Angel of Lucifer = Mr.Jin成神之路 = Hacker_AZERO TOP 1</title>
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/CTF/" title="分类于 CTF">CTF</a>
 </div>
 
-    <span><a href="/2021/03/05/ctf-wp/%E5%AF%92%E5%81%87wp/6/" title="寒假wp">寒假wp</a></span>
+    <span><a href="/2020/11/28/ctf-wp/123/" title="本周 C语言练习代码">本周 C语言练习代码</a></span>
   </li>
 
       
@@ -376,27 +450,7 @@ The Angel of Lucifer = Mr.Jin成神之路 = Hacker_AZERO TOP 1</title>
 <a href="/categories/CTF/" title="分类于 CTF">CTF</a>
 </div>
 
-    <span><a href="/2020/11/28/ctf-wp/%E6%9C%AC%E5%91%A8re-wp/" title="本周re-wp">本周re-wp</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/CTF/" title="分类于 CTF">CTF</a>
-</div>
-
-    <span><a href="/2021/03/05/ctf-wp/%E5%AF%92%E5%81%87wp/7/" title="寒假wp">寒假wp</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/CTF/" title="分类于 CTF">CTF</a>
-</div>
-
-    <span><a href="/2020/12/06/ctf-wp/12-5-re-wp/" title="12.5 re-wp">12.5 re-wp</a></span>
+    <span><a href="/2021/03/06/ctf-wp/%E5%AF%92%E5%81%87wp/14/" title="寒假wp">寒假wp</a></span>
   </li>
 
       
@@ -413,39 +467,10 @@ The Angel of Lucifer = Mr.Jin成神之路 = Hacker_AZERO TOP 1</title>
   <li class="item">
     
 <div class="breadcrumb">
-</div>
-
-    <span><a href="/2021/04/22/a/" title="a">a</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
 <a href="/categories/CTF/" title="分类于 CTF">CTF</a>
 </div>
 
-    <span><a href="/2021/03/05/ctf-wp/%E5%AF%92%E5%81%87wp/4/" title="寒假wp">寒假wp</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/CTF/" title="分类于 CTF">CTF</a>
-</div>
-
-    <span><a href="/2021/03/06/ctf-wp/%E5%AF%92%E5%81%87wp/11/" title="寒假wp">寒假wp</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/CTF/" title="分类于 CTF">CTF</a>
-</div>
-
-    <span><a href="/2021/04/07/ctf-wp/%E6%9C%AC%E5%91%A8%E5%8D%9A%E5%AE%A247/%E6%9C%AC%E5%91%A8/" title="本周blog">本周blog</a></span>
+    <span><a href="/2021/03/05/ctf-wp/%E5%AF%92%E5%81%87wp/8/" title="寒假wp">寒假wp</a></span>
   </li>
 
   </ul>
@@ -476,7 +501,7 @@ The Angel of Lucifer = Mr.Jin成神之路 = Hacker_AZERO TOP 1</title>
   </div>
 <script data-config type="text/javascript">
   var LOCAL = {
-    path: '2021/04/22/a/',
+    path: '2021/04/22/C语言算法/C++常量引用/C++中常量引用/',
     favicon: {
       show: "King Lucifer",
       hide: "LUCIFER'S HACKER"
