@@ -28,15 +28,15 @@
 <link rel="canonical" href="http://azero000.github.io/2021/04/22/C%E8%AF%AD%E8%A8%80%E7%AE%97%E6%B3%95/C++%E5%B8%B8%E9%87%8F%E5%BC%95%E7%94%A8/C++%E4%B8%AD%E5%B8%B8%E9%87%8F%E5%BC%95%E7%94%A8/">
 
 
-<meta name="description" content="常量引用引用 引用是对象的别名，她本身不是对象，只是已经存在对象的另一个名字；所有对引用的操作均是对它所代表的对象的操作。  初始化：定义一个引用的时候，必须初始化，其初始化值必须是一个对象，引用一旦初始化完成，将始终和他的初始值对象绑在一起  例如： int a&#x3D;1;        int &amp;ra&#x3D;a;        ra++;  &#x2F;&#x2F;现在ra是a的别名，对ra的操作，其实就是对a的操作">
+<meta name="description" content="常量引用">
 <meta property="og:type" content="article">
 <meta property="og:title" content="C++常量引用引发的问题">
 <meta property="og:url" content="http://azero000.github.io/2021/04/22/C%E8%AF%AD%E8%A8%80%E7%AE%97%E6%B3%95/C++%E5%B8%B8%E9%87%8F%E5%BC%95%E7%94%A8/C++%E4%B8%AD%E5%B8%B8%E9%87%8F%E5%BC%95%E7%94%A8/index.html">
 <meta property="og:site_name" content="Mr.Jin成神之路">
-<meta property="og:description" content="常量引用引用 引用是对象的别名，她本身不是对象，只是已经存在对象的另一个名字；所有对引用的操作均是对它所代表的对象的操作。  初始化：定义一个引用的时候，必须初始化，其初始化值必须是一个对象，引用一旦初始化完成，将始终和他的初始值对象绑在一起  例如： int a&#x3D;1;        int &amp;ra&#x3D;a;        ra++;  &#x2F;&#x2F;现在ra是a的别名，对ra的操作，其实就是对a的操作">
+<meta property="og:description" content="常量引用">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-04-22T14:20:48.000Z">
-<meta property="article:modified_time" content="2021-04-25T14:21:08.483Z">
+<meta property="article:modified_time" content="2021-04-25T14:45:28.316Z">
 <meta property="article:author" content="Mr.晋">
 <meta property="article:tag" content="指点江山，激扬文字">
 <meta name="twitter:card" content="summary">
@@ -113,12 +113,12 @@ The Angel of Lucifer = Mr.Jin成神之路 = Hacker_AZERO TOP 1</title>
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gicliierfjj20zk0m8npd.jpg"></li>
-          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gipeubcbajj20zk0m8h1h.jpg"></li>
-          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1giclh0m9pdj20zk0m8hdt.jpg"></li>
-          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1giclxxcb6rj20zk0m8b29.jpg"></li>
-          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gicljitigmj20zk0m87fp.jpg"></li>
-          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gipexe4oykj20zk0m87ji.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giciub8ja1j20zk0m81ky.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipeu7txpzj20zk0m81kx.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipexoj0moj20zk0m8kgu.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipev1x5e4j20zk0m8b29.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gicitf0kl1j20zk0m87fe.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gicitht3xtj20zk0m8k5v.jpg"></li>
         </ul>
       </div>
     </header>
@@ -164,7 +164,9 @@ The Angel of Lucifer = Mr.Jin成神之路 = Hacker_AZERO TOP 1</title>
   <div class="body md" itemprop="articleBody">
     
 
-    <h1 id="常量引用"><a href="#常量引用" class="headerlink" title="常量引用"></a>常量引用</h1><h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><ol>
+    <h1 id="常量引用"><a href="#常量引用" class="headerlink" title="常量引用"></a>常量引用</h1><a id="more"></a>
+
+<h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><ol>
 <li><p>引用是对象的别名，她本身不是对象，只是已经存在对象的另一个名字；所有对引用的操作均是对它所代表的对象的操作。</p>
 </li>
 <li><p>初始化：<br>定义一个引用的时候，必须初始化，其初始化值必须是一个对象，引用一旦初始化完成，将始终和他的初始值对象绑在一起</p>
@@ -206,7 +208,7 @@ The Angel of Lucifer = Mr.Jin成神之路 = Hacker_AZERO TOP 1</title>
       <i class="ic i-calendar-check"></i>
     </span>
     <span class="text">更新于</span>
-    <time title="修改时间：2021-04-25 22:21:08" itemprop="dateModified" datetime="2021-04-25T22:21:08+08:00">2021-04-25</time>
+    <time title="修改时间：2021-04-25 22:45:28" itemprop="dateModified" datetime="2021-04-25T22:45:28+08:00">2021-04-25</time>
   </span>
   <span id="2021/04/22/C语言算法/C++常量引用/C++中常量引用/" class="item leancloud_visitors" data-flag-title="C++常量引用引发的问题" title="阅读次数">
       <span class="icon">
@@ -264,20 +266,20 @@ The Angel of Lucifer = Mr.Jin成神之路 = Hacker_AZERO TOP 1</title>
     <div class="item left">
       
 
-  <a href="/2021/04/18/ctf-wp/base64%E5%92%8Cpython%E4%B8%AD%E7%9A%84base/python%E5%92%8Cbase64%E7%9A%84%E7%BA%A0%E7%BC%A0%EF%BC%81/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giclh5u05ej20zk0m87df.jpg" title="python和base64">
+  <a href="/2021/04/22/C%E8%AF%AD%E8%A8%80%E7%AE%97%E6%B3%95/%E9%AB%98%E5%B0%94%E9%A1%BF%E6%9D%BF%E7%9A%84%E5%AE%9E%E7%8E%B0/%E9%AB%98%E5%B0%94%E9%A1%BF%E6%9D%BF%E7%9A%84%E5%AE%9E%E7%8E%B0/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva2.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gicis081o9j20zk0m8dmr.jpg" title="高尔顿板的实现">
   <span class="type">上一篇</span>
-  <span class="category"><i class="ic i-flag"></i> CTF</span>
-  <h3>python和base64</h3>
+  <span class="category"><i class="ic i-flag"></i> C语言</span>
+  <h3>高尔顿板的实现</h3>
   </a>
 
     </div>
     <div class="item right">
       
 
-  <a href="/2021/04/23/C%E8%AF%AD%E8%A8%80%E7%AE%97%E6%B3%95/%E7%94%9F%E6%88%90%E9%9A%8F%E6%9C%BA%E5%AF%86%E7%A0%81/%E9%9A%8F%E6%9C%BA%E5%AF%86%E7%A0%81/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giclhtuo6nj20zk0m8ttm.jpg" title="C++常量引用引发的问题">
+  <a href="/2021/04/23/C%E8%AF%AD%E8%A8%80%E7%AE%97%E6%B3%95/%E7%94%9F%E6%88%90%E9%9A%8F%E6%9C%BA%E5%AF%86%E7%A0%81/%E9%9A%8F%E6%9C%BA%E5%AF%86%E7%A0%81/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva2.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gicivghyooj20zk0m8dir.jpg" title="生成随机密码">
   <span class="type">下一篇</span>
   <span class="category"><i class="ic i-flag"></i> C语言</span>
-  <h3>C++常量引用引发的问题</h3>
+  <h3>生成随机密码</h3>
   </a>
 
     </div>
@@ -300,7 +302,7 @@ The Angel of Lucifer = Mr.Jin成神之路 = Hacker_AZERO TOP 1</title>
       </div>
       <div class="related panel pjax" data-title="系列文章">
         <ul>
-          <li><a href="/2020/12/02/C%E8%AF%AD%E8%A8%80%E7%AE%97%E6%B3%95/12%E6%9C%882%E6%97%A5/" rel="bookmark" title="2020.12月02日练习">2020.12月02日练习</a></li><li><a href="/2021/03/01/C%E8%AF%AD%E8%A8%80%E7%AE%97%E6%B3%95/%E9%AB%98%E5%B0%94%E9%A1%BF%E6%9D%BF%E7%9A%84%E5%AE%9E%E7%8E%B0/%E9%AB%98%E5%B0%94%E9%A1%BF%E6%9D%BF%E7%9A%84%E5%AE%9E%E7%8E%B0/" rel="bookmark" title="高尔顿板的实现">高尔顿板的实现</a></li><li><a href="/2021/03/20/C%E8%AF%AD%E8%A8%80%E7%AE%97%E6%B3%95/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F/" rel="bookmark" title="一. 冒泡排序算法">一. 冒泡排序算法</a></li><li><a href="/2021/03/22/C%E8%AF%AD%E8%A8%80%E7%AE%97%E6%B3%95/%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F/%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F/" rel="bookmark" title="二. 选择排序算法">二. 选择排序算法</a></li><li><a href="/2021/04/01/C%E8%AF%AD%E8%A8%80%E7%AE%97%E6%B3%95/%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F/%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F/" rel="bookmark" title="三. 插入排序算法">三. 插入排序算法</a></li><li><a href="/2021/04/12/C%E8%AF%AD%E8%A8%80%E7%AE%97%E6%B3%95/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F/" rel="bookmark" title="四. 快速排序算法">四. 快速排序算法</a></li><li><a href="/2021/04/16/C%E8%AF%AD%E8%A8%80%E7%AE%97%E6%B3%95/%E5%B8%8C%E5%B0%94%E6%8E%92%E5%BA%8F/Shellsort/" rel="bookmark" title="五. 希尔排序算法">五. 希尔排序算法</a></li><li class="active"><a href="/2021/04/22/C%E8%AF%AD%E8%A8%80%E7%AE%97%E6%B3%95/C++%E5%B8%B8%E9%87%8F%E5%BC%95%E7%94%A8/C++%E4%B8%AD%E5%B8%B8%E9%87%8F%E5%BC%95%E7%94%A8/" rel="bookmark" title="C++常量引用引发的问题">C++常量引用引发的问题</a></li><li><a href="/2021/04/23/C%E8%AF%AD%E8%A8%80%E7%AE%97%E6%B3%95/%E7%94%9F%E6%88%90%E9%9A%8F%E6%9C%BA%E5%AF%86%E7%A0%81/%E9%9A%8F%E6%9C%BA%E5%AF%86%E7%A0%81/" rel="bookmark" title="C++常量引用引发的问题">C++常量引用引发的问题</a></li>
+          <li><a href="/2020/12/02/C%E8%AF%AD%E8%A8%80%E7%AE%97%E6%B3%95/12%E6%9C%882%E6%97%A5/" rel="bookmark" title="2020.12月02日练习">2020.12月02日练习</a></li><li><a href="/2021/03/20/C%E8%AF%AD%E8%A8%80%E7%AE%97%E6%B3%95/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F/" rel="bookmark" title="一. 冒泡排序算法">一. 冒泡排序算法</a></li><li><a href="/2021/03/22/C%E8%AF%AD%E8%A8%80%E7%AE%97%E6%B3%95/%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F/%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F/" rel="bookmark" title="二. 选择排序算法">二. 选择排序算法</a></li><li><a href="/2021/04/01/C%E8%AF%AD%E8%A8%80%E7%AE%97%E6%B3%95/%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F/%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F/" rel="bookmark" title="三. 插入排序算法">三. 插入排序算法</a></li><li><a href="/2021/04/12/C%E8%AF%AD%E8%A8%80%E7%AE%97%E6%B3%95/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F/" rel="bookmark" title="四. 快速排序算法">四. 快速排序算法</a></li><li><a href="/2021/04/16/C%E8%AF%AD%E8%A8%80%E7%AE%97%E6%B3%95/%E5%B8%8C%E5%B0%94%E6%8E%92%E5%BA%8F/Shellsort/" rel="bookmark" title="五. 希尔排序算法">五. 希尔排序算法</a></li><li><a href="/2021/04/22/C%E8%AF%AD%E8%A8%80%E7%AE%97%E6%B3%95/%E9%AB%98%E5%B0%94%E9%A1%BF%E6%9D%BF%E7%9A%84%E5%AE%9E%E7%8E%B0/%E9%AB%98%E5%B0%94%E9%A1%BF%E6%9D%BF%E7%9A%84%E5%AE%9E%E7%8E%B0/" rel="bookmark" title="高尔顿板的实现">高尔顿板的实现</a></li><li class="active"><a href="/2021/04/22/C%E8%AF%AD%E8%A8%80%E7%AE%97%E6%B3%95/C++%E5%B8%B8%E9%87%8F%E5%BC%95%E7%94%A8/C++%E4%B8%AD%E5%B8%B8%E9%87%8F%E5%BC%95%E7%94%A8/" rel="bookmark" title="C++常量引用引发的问题">C++常量引用引发的问题</a></li><li><a href="/2021/04/23/C%E8%AF%AD%E8%A8%80%E7%AE%97%E6%B3%95/%E7%94%9F%E6%88%90%E9%9A%8F%E6%9C%BA%E5%AF%86%E7%A0%81/%E9%9A%8F%E6%9C%BA%E5%AF%86%E7%A0%81/" rel="bookmark" title="生成随机密码">生成随机密码</a></li>
         </ul>
       </div>
       <div class="overview panel" data-title="站点概览">
@@ -372,7 +374,7 @@ The Angel of Lucifer = Mr.Jin成神之路 = Hacker_AZERO TOP 1</title>
 
   <ul id="quick">
     <li class="prev pjax">
-        <a href="/2021/04/18/ctf-wp/base64%E5%92%8Cpython%E4%B8%AD%E7%9A%84base/python%E5%92%8Cbase64%E7%9A%84%E7%BA%A0%E7%BC%A0%EF%BC%81/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a>
+        <a href="/2021/04/22/C%E8%AF%AD%E8%A8%80%E7%AE%97%E6%B3%95/%E9%AB%98%E5%B0%94%E9%A1%BF%E6%9D%BF%E7%9A%84%E5%AE%9E%E7%8E%B0/%E9%AB%98%E5%B0%94%E9%A1%BF%E6%9D%BF%E7%9A%84%E5%AE%9E%E7%8E%B0/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a>
     </li>
     <li class="up"><i class="ic i-arrow-up"></i></li>
     <li class="down"><i class="ic i-arrow-down"></i></li>
@@ -399,40 +401,10 @@ The Angel of Lucifer = Mr.Jin成神之路 = Hacker_AZERO TOP 1</title>
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/C%E8%AF%AD%E8%A8%80/" title="分类于 C语言">C语言</a>
-</div>
-
-    <span><a href="/2021/03/22/C%E8%AF%AD%E8%A8%80%E7%AE%97%E6%B3%95/%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F/%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F/" title="二. 选择排序算法">二. 选择排序算法</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
 <a href="/categories/CTF/" title="分类于 CTF">CTF</a>
 </div>
 
-    <span><a href="/2021/03/05/ctf-wp/%E5%AF%92%E5%81%87wp/8/" title="寒假wp">寒假wp</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/CTF/" title="分类于 CTF">CTF</a>
-</div>
-
-    <span><a href="/2021/04/07/ctf-wp/%E6%9C%AC%E5%91%A8%E5%8D%9A%E5%AE%A247/%E6%9C%AC%E5%91%A8/" title="本周blog">本周blog</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/CTF/" title="分类于 CTF">CTF</a>
-</div>
-
-    <span><a href="/2021/03/05/ctf-wp/%E5%AF%92%E5%81%87wp/6/" title="寒假wp">寒假wp</a></span>
+    <span><a href="/2021/04/18/ctf-wp/base64%E5%92%8Cpython%E4%B8%AD%E7%9A%84base/python%E5%92%8Cbase64%E7%9A%84%E7%BA%A0%E7%BC%A0%EF%BC%81/" title="python和base64">python和base64</a></span>
   </li>
 
       
@@ -442,17 +414,7 @@ The Angel of Lucifer = Mr.Jin成神之路 = Hacker_AZERO TOP 1</title>
 <a href="/categories/C%E8%AF%AD%E8%A8%80/" title="分类于 C语言">C语言</a>
 </div>
 
-    <span><a href="/2021/04/01/C%E8%AF%AD%E8%A8%80%E7%AE%97%E6%B3%95/%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F/%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F/" title="三. 插入排序算法">三. 插入排序算法</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/%E6%B1%87%E7%BC%96/" title="分类于 汇编">汇编</a>
-</div>
-
-    <span><a href="/2020/11/28/%E6%B1%87%E7%BC%96/%E6%B1%87%E7%BC%96%E5%AD%A6%E4%B9%A0%E5%85%A5%E9%97%A8/" title="汇编语言入门">汇编语言入门</a></span>
+    <span><a href="/2021/04/12/C%E8%AF%AD%E8%A8%80%E7%AE%97%E6%B3%95/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F/" title="四. 快速排序算法">四. 快速排序算法</a></span>
   </li>
 
       
@@ -462,7 +424,26 @@ The Angel of Lucifer = Mr.Jin成神之路 = Hacker_AZERO TOP 1</title>
 <a href="/categories/C%E8%AF%AD%E8%A8%80/" title="分类于 C语言">C语言</a>
 </div>
 
-    <span><a href="/2021/04/16/C%E8%AF%AD%E8%A8%80%E7%AE%97%E6%B3%95/%E5%B8%8C%E5%B0%94%E6%8E%92%E5%BA%8F/Shellsort/" title="五. 希尔排序算法">五. 希尔排序算法</a></span>
+    <span><a href="/2020/12/02/C%E8%AF%AD%E8%A8%80%E7%AE%97%E6%B3%95/12%E6%9C%882%E6%97%A5/" title="2020.12月02日练习">2020.12月02日练习</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2020/11/24/ctf-wp/hello-world/" title="Hello World">Hello World</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/CTF/" title="分类于 CTF">CTF</a>
+</div>
+
+    <span><a href="/2020/11/28/ctf-wp/%E6%9C%AC%E5%91%A8%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/" title="本周学习记录">本周学习记录</a></span>
   </li>
 
       
@@ -482,16 +463,37 @@ The Angel of Lucifer = Mr.Jin成神之路 = Hacker_AZERO TOP 1</title>
 <a href="/categories/CTF/" title="分类于 CTF">CTF</a>
 </div>
 
-    <span><a href="/2020/11/29/ctf-wp/2020.11%E6%9C%8829%E6%97%A5/" title="2020.11月29日练习">2020.11月29日练习</a></span>
+    <span><a href="/2021/03/05/ctf-wp/%E5%AF%92%E5%81%87wp/8/" title="寒假wp">寒假wp</a></span>
   </li>
 
       
   <li class="item">
     
 <div class="breadcrumb">
+<a href="/categories/CTF/" title="分类于 CTF">CTF</a>
 </div>
 
-    <span><a href="/2021/04/23/b/" title="b">b</a></span>
+    <span><a href="/2020/12/06/ctf-wp/12-5-re-wp/" title="12.5 re-wp">12.5 re-wp</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/CTF/" title="分类于 CTF">CTF</a>
+</div>
+
+    <span><a href="/2021/03/06/ctf-wp/%E5%AF%92%E5%81%87wp/11/" title="寒假wp">寒假wp</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/CTF/" title="分类于 CTF">CTF</a>
+</div>
+
+    <span><a href="/2021/03/25/ctf-wp/3%E6%9C%8819%E6%97%A5blog/%E6%9C%AC%E5%91%A8blog/" title="本周blog">本周blog</a></span>
   </li>
 
   </ul>
