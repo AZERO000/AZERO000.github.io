@@ -39,7 +39,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://azero000.github.io/2021/05/19/%E5%AF%86%E7%A0%81%E5%AD%A6/RC4/1.png">
 <meta property="article:published_time" content="2021-05-18T16:00:00.000Z">
-<meta property="article:modified_time" content="2021-05-23T02:36:49.906Z">
+<meta property="article:modified_time" content="2021-05-23T02:59:16.158Z">
 <meta property="article:author" content="Mr.晋">
 <meta property="article:tag" content="hexo">
 <meta property="article:tag" content="github">
@@ -119,12 +119,12 @@ The Angel of Lucifer = Mr.Jin成神之路 = Hacker_AZERO TOP 1</title>
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gipex2cdtbj20zk0m8x6p.jpg"></li>
-          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gicitspjpbj20zk0m81ky.jpg"></li>
-          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gipeyhsblkj20zk0m81kx.jpg"></li>
-          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gipew8gmvyj20zk0m87wh.jpg"></li>
-          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gipew28b65j20zk0m8hdt.jpg"></li>
-          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gipeyonbf9j20zk0m8e81.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gipetfk5zwj20zk0m8e81.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1giclip4jbpj20zk0m87cv.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1giclfdu6exj20zk0m87hw.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1giclffsa1cj20zk0m811l.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gicitspjpbj20zk0m81ky.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1giclx29mstj20zk0m8hdt.jpg"></li>
         </ul>
       </div>
     </header>
@@ -172,15 +172,15 @@ The Angel of Lucifer = Mr.Jin成神之路 = Hacker_AZERO TOP 1</title>
 
     <h1 id="RC4的加解密原理及实现"><a href="#RC4的加解密原理及实现" class="headerlink" title="RC4的加解密原理及实现"></a>RC4的加解密原理及实现</h1><a id="more"></a>
 
-<h2 id="1-1-简介："><a href="#1-1-简介：" class="headerlink" title="1.1 简介："></a>1.1 简介：</h2><p>RC4是一种对称密码算法，它属于对称密码算法中的序列密码(streamcipher,也称为流密码)，它是可变密钥长度，面向字节操作的流密码。起初该算法是商业机密，直到1994年，它才公诸于众。由于RC4具有算法简单，运算速度快，软硬件实现都十分容易等优点，使其在一些协议和标准里得到了广泛应用。</p>
-<h2 id="1-2-实现加密解密流程图"><a href="#1-2-实现加密解密流程图" class="headerlink" title="1.2 实现加密解密流程图"></a>1.2 实现加密解密流程图</h2><img data-src="/2021/05/19/%E5%AF%86%E7%A0%81%E5%AD%A6/RC4/1.png" class>
+<h2 id="简介："><a href="#简介：" class="headerlink" title="简介："></a>简介：</h2><p>RC4是一种对称密码算法，它属于对称密码算法中的序列密码(streamcipher,也称为流密码)，它是可变密钥长度，面向字节操作的流密码。起初该算法是商业机密，直到1994年，它才公诸于众。由于RC4具有算法简单，运算速度快，软硬件实现都十分容易等优点，使其在一些协议和标准里得到了广泛应用。</p>
+<h2 id="实现加密解密流程图"><a href="#实现加密解密流程图" class="headerlink" title="实现加密解密流程图"></a>实现加密解密流程图</h2><img data-src="/2021/05/19/%E5%AF%86%E7%A0%81%E5%AD%A6/RC4/1.png" class>
 
-<h2 id="1-3-实现方法"><a href="#1-3-实现方法" class="headerlink" title="1.3 实现方法"></a>1.3 实现方法</h2><h3 id="1-3-1-状态向量S和初始向量T的初始化"><a href="#1-3-1-状态向量S和初始向量T的初始化" class="headerlink" title="1.3.1 状态向量S和初始向量T的初始化"></a>1.3.1 状态向量S和初始向量T的初始化</h3><p>初始化S和T：</p>
+<h2 id="实现方法"><a href="#实现方法" class="headerlink" title="实现方法"></a>实现方法</h2><h3 id="状态向量S和初始向量T的初始化"><a href="#状态向量S和初始向量T的初始化" class="headerlink" title="状态向量S和初始向量T的初始化"></a>状态向量S和初始向量T的初始化</h3><p>初始化S和T：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">S[256]   T[256]</span><br><span class="line">for(int i&#x3D;0;i&lt;256;++i)</span><br><span class="line">&#123;</span><br><span class="line">	s[i]&#x3D;i;</span><br><span class="line">	T[i]&#x3D;key[i % lenkey];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="1-3-2-数据表S的初始置换"><a href="#1-3-2-数据表S的初始置换" class="headerlink" title="1.3.2 数据表S的初始置换"></a>1.3.2 数据表S的初始置换</h3><p>S是密钥流种子</p>
+<h3 id="数据表S的初始置换"><a href="#数据表S的初始置换" class="headerlink" title="数据表S的初始置换"></a>数据表S的初始置换</h3><p>S是密钥流种子</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">for(i&#x3D;0;i&lt;256;++i)</span><br><span class="line">&#123;</span><br><span class="line">	j&#x3D;(j+S[i]+T[i])%256;</span><br><span class="line">	swap(S[i],S[j]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="1-3-3-密钥流的生成（伪随机数生成方法PRGA）"><a href="#1-3-3-密钥流的生成（伪随机数生成方法PRGA）" class="headerlink" title="1.3.3 密钥流的生成（伪随机数生成方法PRGA）"></a>1.3.3 密钥流的生成（伪随机数生成方法PRGA）</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">i=<span class="number">0</span>;</span><br><span class="line">j=<span class="number">0</span>;</span><br><span class="line"><span class="keyword">for</span>(r=<span class="number">0</span>;r&lt;lendata;r++)</span><br><span class="line">&#123;</span><br><span class="line">    i=(i+<span class="number">1</span>)%<span class="number">256</span>;</span><br><span class="line">    j=(j+S[i])%<span class="number">256</span>;</span><br><span class="line">    swap(S[i],S[j]);</span><br><span class="line">    t=(S[i]+S[j])%<span class="number">256</span>;</span><br><span class="line">    keystream[r]=S[t];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="1-3-4-加解密进行异或实现"><a href="#1-3-4-加解密进行异或实现" class="headerlink" title="1.3.4 加解密进行异或实现"></a>1.3.4 加解密进行异或实现</h3><h2 id="1-4-C语言代码实现如下："><a href="#1-4-C语言代码实现如下：" class="headerlink" title="1.4 C语言代码实现如下："></a>1.4 C语言代码实现如下：</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> S[<span class="number">256</span>],T[<span class="number">256</span>];</span><br><span class="line">    <span class="keyword">int</span> i=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">int</span> j=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">int</span> r,t;</span><br><span class="line">    <span class="keyword">int</span> tmp=<span class="number">0</span>;</span><br><span class="line">    <span class="built_in">string</span> chushi;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;<span class="string">&quot;请输入明文/密文：&quot;</span>;</span><br><span class="line">    getline(<span class="built_in">cin</span>,chushi);</span><br><span class="line">    <span class="built_in">string</span> key;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;<span class="string">&quot;请输入秘钥：&quot;</span>;</span><br><span class="line">    getline(<span class="built_in">cin</span>,key);</span><br><span class="line">    <span class="keyword">int</span> lendata=chushi.length();</span><br><span class="line">    <span class="keyword">int</span> lenkey=key.length();</span><br><span class="line">    <span class="keyword">char</span>* keystream=<span class="keyword">new</span> <span class="keyword">char</span>[lendata];</span><br><span class="line">    <span class="keyword">char</span>* jieguo=<span class="keyword">new</span> <span class="keyword">char</span>[lendata];</span><br><span class="line">    <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;<span class="number">256</span>;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        S[i]=i;</span><br><span class="line">        T[i]=key[i % lenkey];       <span class="comment">//循环填入</span></span><br><span class="line">    &#125;</span><br><span class="line">    j=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;<span class="number">256</span>;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        j=(j+S[i]+T[i])%<span class="number">256</span>;</span><br><span class="line">        tmp=S[i];</span><br><span class="line">        S[i]=S[j];</span><br><span class="line">        S[j]=tmp;</span><br><span class="line">    &#125;</span><br><span class="line">    i=<span class="number">0</span>;</span><br><span class="line">    j=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(r=<span class="number">0</span>;r&lt;lendata;r++)</span><br><span class="line">    &#123;</span><br><span class="line">        i=(i+<span class="number">1</span>)%<span class="number">256</span>;</span><br><span class="line">        j=(j+S[i])%<span class="number">256</span>;</span><br><span class="line">        swap(S[i],S[j]);</span><br><span class="line">        t=(S[i]+S[j])%<span class="number">256</span>;</span><br><span class="line">        keystream[r]=S[t];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;lendata;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        jieguo[i]=chushi[i]^keystream[i];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;lendata;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt;jieguo[i];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">delete</span> keystream;</span><br><span class="line">    <span class="keyword">delete</span> jieguo;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="密钥流的生成（伪随机数生成方法PRGA）"><a href="#密钥流的生成（伪随机数生成方法PRGA）" class="headerlink" title="密钥流的生成（伪随机数生成方法PRGA）"></a>密钥流的生成（伪随机数生成方法PRGA）</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">i=<span class="number">0</span>;</span><br><span class="line">j=<span class="number">0</span>;</span><br><span class="line"><span class="keyword">for</span>(r=<span class="number">0</span>;r&lt;lendata;r++)</span><br><span class="line">&#123;</span><br><span class="line">    i=(i+<span class="number">1</span>)%<span class="number">256</span>;</span><br><span class="line">    j=(j+S[i])%<span class="number">256</span>;</span><br><span class="line">    swap(S[i],S[j]);</span><br><span class="line">    t=(S[i]+S[j])%<span class="number">256</span>;</span><br><span class="line">    keystream[r]=S[t];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="加解密进行异或实现"><a href="#加解密进行异或实现" class="headerlink" title="加解密进行异或实现"></a>加解密进行异或实现</h3><h2 id="C语言代码实现如下："><a href="#C语言代码实现如下：" class="headerlink" title="C语言代码实现如下："></a>C语言代码实现如下：</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> S[<span class="number">256</span>],T[<span class="number">256</span>];</span><br><span class="line">    <span class="keyword">int</span> i=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">int</span> j=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">int</span> r,t;</span><br><span class="line">    <span class="keyword">int</span> tmp=<span class="number">0</span>;</span><br><span class="line">    <span class="built_in">string</span> chushi;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;<span class="string">&quot;请输入明文/密文：&quot;</span>;</span><br><span class="line">    getline(<span class="built_in">cin</span>,chushi);</span><br><span class="line">    <span class="built_in">string</span> key;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;<span class="string">&quot;请输入秘钥：&quot;</span>;</span><br><span class="line">    getline(<span class="built_in">cin</span>,key);</span><br><span class="line">    <span class="keyword">int</span> lendata=chushi.length();</span><br><span class="line">    <span class="keyword">int</span> lenkey=key.length();</span><br><span class="line">    <span class="keyword">char</span>* keystream=<span class="keyword">new</span> <span class="keyword">char</span>[lendata];</span><br><span class="line">    <span class="keyword">char</span>* jieguo=<span class="keyword">new</span> <span class="keyword">char</span>[lendata];</span><br><span class="line">    <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;<span class="number">256</span>;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        S[i]=i;</span><br><span class="line">        T[i]=key[i % lenkey];       <span class="comment">//循环填入</span></span><br><span class="line">    &#125;</span><br><span class="line">    j=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;<span class="number">256</span>;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        j=(j+S[i]+T[i])%<span class="number">256</span>;</span><br><span class="line">        tmp=S[i];</span><br><span class="line">        S[i]=S[j];</span><br><span class="line">        S[j]=tmp;</span><br><span class="line">    &#125;</span><br><span class="line">    i=<span class="number">0</span>;</span><br><span class="line">    j=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(r=<span class="number">0</span>;r&lt;lendata;r++)</span><br><span class="line">    &#123;</span><br><span class="line">        i=(i+<span class="number">1</span>)%<span class="number">256</span>;</span><br><span class="line">        j=(j+S[i])%<span class="number">256</span>;</span><br><span class="line">        swap(S[i],S[j]);</span><br><span class="line">        t=(S[i]+S[j])%<span class="number">256</span>;</span><br><span class="line">        keystream[r]=S[t];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;lendata;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        jieguo[i]=chushi[i]^keystream[i];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;lendata;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt;jieguo[i];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">delete</span> keystream;</span><br><span class="line">    <span class="keyword">delete</span> jieguo;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
       <div class="tags">
           <a href="/tags/hexo/" rel="tag"><i class="ic i-tag"></i> hexo</a>
           <a href="/tags/github/" rel="tag"><i class="ic i-tag"></i> github</a>
@@ -196,7 +196,7 @@ The Angel of Lucifer = Mr.Jin成神之路 = Hacker_AZERO TOP 1</title>
       <i class="ic i-calendar-check"></i>
     </span>
     <span class="text">更新于</span>
-    <time title="修改时间：2021-05-23 10:36:49" itemprop="dateModified" datetime="2021-05-23T10:36:49+08:00">2021-05-23</time>
+    <time title="修改时间：2021-05-23 10:59:16" itemprop="dateModified" datetime="2021-05-23T10:59:16+08:00">2021-05-23</time>
   </span>
   <span id="2021/05/19/密码学/RC4/" class="item leancloud_visitors" data-flag-title="RC4的加解密原理及实现" title="阅读次数">
       <span class="icon">
@@ -254,7 +254,7 @@ The Angel of Lucifer = Mr.Jin成神之路 = Hacker_AZERO TOP 1</title>
     <div class="item left">
       
 
-  <a href="/2021/05/13/ctf-wp/OD%E8%84%B1%E5%A3%B3%E5%85%B7%E4%BD%93%E6%AD%A5%E9%AA%A4/OD%E4%BD%BF%E7%94%A8ESP%E8%84%B1%E5%A3%B3%E5%85%B7%E4%BD%93%E6%AD%A5%E9%AA%A4/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva3.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gipevo9j1jj20zk0m8e81.jpg" title="OD使用ESP定律脱UPX壳详解">
+  <a href="/2021/05/13/ctf-wp/OD%E8%84%B1%E5%A3%B3%E5%85%B7%E4%BD%93%E6%AD%A5%E9%AA%A4/OD%E4%BD%BF%E7%94%A8ESP%E8%84%B1%E5%A3%B3%E5%85%B7%E4%BD%93%E6%AD%A5%E9%AA%A4/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gipetv6p75j20zk0m8x6p.jpg" title="OD使用ESP定律脱UPX壳详解">
   <span class="type">上一篇</span>
   <span class="category"><i class="ic i-flag"></i> CTF</span>
   <h3>OD使用ESP定律脱UPX壳详解</h3>
@@ -262,6 +262,14 @@ The Angel of Lucifer = Mr.Jin成神之路 = Hacker_AZERO TOP 1</title>
 
     </div>
     <div class="item right">
+      
+
+  <a href="/2021/05/23/ctf-wp/%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%95/%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%95/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giclj61ylzj20zk0m8b29.jpg" title="5月23日份题">
+  <span class="type">下一篇</span>
+  <span class="category"><i class="ic i-flag"></i> CTF</span>
+  <h3>5月23日份题</h3>
+  </a>
+
     </div>
 </div>
 
@@ -278,7 +286,7 @@ The Angel of Lucifer = Mr.Jin成神之路 = Hacker_AZERO TOP 1</title>
   <div class="panels">
     <div class="inner">
       <div class="contents panel pjax" data-title="文章目录">
-          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#RC4%E7%9A%84%E5%8A%A0%E8%A7%A3%E5%AF%86%E5%8E%9F%E7%90%86%E5%8F%8A%E5%AE%9E%E7%8E%B0"><span class="toc-number">1.</span> <span class="toc-text">RC4的加解密原理及实现</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-1-%E7%AE%80%E4%BB%8B%EF%BC%9A"><span class="toc-number">1.1.</span> <span class="toc-text">1.1 简介：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-2-%E5%AE%9E%E7%8E%B0%E5%8A%A0%E5%AF%86%E8%A7%A3%E5%AF%86%E6%B5%81%E7%A8%8B%E5%9B%BE"><span class="toc-number">1.2.</span> <span class="toc-text">1.2 实现加密解密流程图</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-3-%E5%AE%9E%E7%8E%B0%E6%96%B9%E6%B3%95"><span class="toc-number">1.3.</span> <span class="toc-text">1.3 实现方法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-1-%E7%8A%B6%E6%80%81%E5%90%91%E9%87%8FS%E5%92%8C%E5%88%9D%E5%A7%8B%E5%90%91%E9%87%8FT%E7%9A%84%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="toc-number">1.3.1.</span> <span class="toc-text">1.3.1 状态向量S和初始向量T的初始化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-2-%E6%95%B0%E6%8D%AE%E8%A1%A8S%E7%9A%84%E5%88%9D%E5%A7%8B%E7%BD%AE%E6%8D%A2"><span class="toc-number">1.3.2.</span> <span class="toc-text">1.3.2 数据表S的初始置换</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-3-%E5%AF%86%E9%92%A5%E6%B5%81%E7%9A%84%E7%94%9F%E6%88%90%EF%BC%88%E4%BC%AA%E9%9A%8F%E6%9C%BA%E6%95%B0%E7%94%9F%E6%88%90%E6%96%B9%E6%B3%95PRGA%EF%BC%89"><span class="toc-number">1.3.3.</span> <span class="toc-text">1.3.3 密钥流的生成（伪随机数生成方法PRGA）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-4-%E5%8A%A0%E8%A7%A3%E5%AF%86%E8%BF%9B%E8%A1%8C%E5%BC%82%E6%88%96%E5%AE%9E%E7%8E%B0"><span class="toc-number">1.3.4.</span> <span class="toc-text">1.3.4 加解密进行异或实现</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-4-C%E8%AF%AD%E8%A8%80%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0%E5%A6%82%E4%B8%8B%EF%BC%9A"><span class="toc-number">1.4.</span> <span class="toc-text">1.4 C语言代码实现如下：</span></a></li></ol></li></ol>
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#RC4%E7%9A%84%E5%8A%A0%E8%A7%A3%E5%AF%86%E5%8E%9F%E7%90%86%E5%8F%8A%E5%AE%9E%E7%8E%B0"><span class="toc-number">1.</span> <span class="toc-text">RC4的加解密原理及实现</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AE%80%E4%BB%8B%EF%BC%9A"><span class="toc-number">1.1.</span> <span class="toc-text">简介：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9E%E7%8E%B0%E5%8A%A0%E5%AF%86%E8%A7%A3%E5%AF%86%E6%B5%81%E7%A8%8B%E5%9B%BE"><span class="toc-number">1.2.</span> <span class="toc-text">实现加密解密流程图</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9E%E7%8E%B0%E6%96%B9%E6%B3%95"><span class="toc-number">1.3.</span> <span class="toc-text">实现方法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%8A%B6%E6%80%81%E5%90%91%E9%87%8FS%E5%92%8C%E5%88%9D%E5%A7%8B%E5%90%91%E9%87%8FT%E7%9A%84%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="toc-number">1.3.1.</span> <span class="toc-text">状态向量S和初始向量T的初始化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E8%A1%A8S%E7%9A%84%E5%88%9D%E5%A7%8B%E7%BD%AE%E6%8D%A2"><span class="toc-number">1.3.2.</span> <span class="toc-text">数据表S的初始置换</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%86%E9%92%A5%E6%B5%81%E7%9A%84%E7%94%9F%E6%88%90%EF%BC%88%E4%BC%AA%E9%9A%8F%E6%9C%BA%E6%95%B0%E7%94%9F%E6%88%90%E6%96%B9%E6%B3%95PRGA%EF%BC%89"><span class="toc-number">1.3.3.</span> <span class="toc-text">密钥流的生成（伪随机数生成方法PRGA）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8A%A0%E8%A7%A3%E5%AF%86%E8%BF%9B%E8%A1%8C%E5%BC%82%E6%88%96%E5%AE%9E%E7%8E%B0"><span class="toc-number">1.3.4.</span> <span class="toc-text">加解密进行异或实现</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#C%E8%AF%AD%E8%A8%80%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0%E5%A6%82%E4%B8%8B%EF%BC%9A"><span class="toc-number">1.4.</span> <span class="toc-text">C语言代码实现如下：</span></a></li></ol></li></ol>
       </div>
       <div class="related panel pjax" data-title="系列文章">
         <ul>
@@ -296,7 +304,7 @@ The Angel of Lucifer = Mr.Jin成神之路 = Hacker_AZERO TOP 1</title>
 <nav class="state">
     <div class="item posts">
       <a href="/archives/">
-        <span class="count">41</span>
+        <span class="count">42</span>
         <span class="name">文章</span>
       </a>
     </div>
@@ -354,10 +362,12 @@ The Angel of Lucifer = Mr.Jin成神之路 = Hacker_AZERO TOP 1</title>
 
   <ul id="quick">
     <li class="prev pjax">
+        <a href="/2021/05/13/ctf-wp/OD%E8%84%B1%E5%A3%B3%E5%85%B7%E4%BD%93%E6%AD%A5%E9%AA%A4/OD%E4%BD%BF%E7%94%A8ESP%E8%84%B1%E5%A3%B3%E5%85%B7%E4%BD%93%E6%AD%A5%E9%AA%A4/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a>
     </li>
     <li class="up"><i class="ic i-arrow-up"></i></li>
     <li class="down"><i class="ic i-arrow-down"></i></li>
     <li class="next pjax">
+        <a href="/2021/05/23/ctf-wp/%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%95/%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%95/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a>
     </li>
     <li class="percent"></li>
   </ul>
@@ -382,17 +392,7 @@ The Angel of Lucifer = Mr.Jin成神之路 = Hacker_AZERO TOP 1</title>
 <a href="/categories/CTF/" title="分类于 CTF">CTF</a>
 </div>
 
-    <span><a href="/2021/04/18/ctf-wp/base64%E5%92%8Cpython%E4%B8%AD%E7%9A%84base/python%E5%92%8Cbase64%E7%9A%84%E7%BA%A0%E7%BC%A0%EF%BC%81/" title="python和base64">python和base64</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/CTF/" title="分类于 CTF">CTF</a>
-</div>
-
-    <span><a href="/2021/02/20/ctf-wp/%E5%AF%92%E5%81%87wp/%E5%AF%92%E5%81%87wp/5/" title="寒假wp">寒假wp</a></span>
+    <span><a href="/2021/02/20/ctf-wp/%E5%AF%92%E5%81%87wp/%E5%AF%92%E5%81%87wp/10/" title="寒假wp">寒假wp</a></span>
   </li>
 
       
@@ -402,16 +402,7 @@ The Angel of Lucifer = Mr.Jin成神之路 = Hacker_AZERO TOP 1</title>
 <a href="/categories/C%E8%AF%AD%E8%A8%80/" title="分类于 C语言">C语言</a>
 </div>
 
-    <span><a href="/2021/04/01/C%E8%AF%AD%E8%A8%80%E7%AE%97%E6%B3%95/%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F/%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F/" title="三. 插入排序算法">三. 插入排序算法</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-</div>
-
-    <span><a href="/2020/10/20/ctf-wp/hello-world/" title="Hello World">Hello World</a></span>
+    <span><a href="/2021/03/20/C%E8%AF%AD%E8%A8%80%E7%AE%97%E6%B3%95/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F/" title="一. 冒泡排序算法">一. 冒泡排序算法</a></span>
   </li>
 
       
@@ -421,7 +412,17 @@ The Angel of Lucifer = Mr.Jin成神之路 = Hacker_AZERO TOP 1</title>
 <a href="/categories/CTF/" title="分类于 CTF">CTF</a>
 </div>
 
-    <span><a href="/2021/05/09/ctf-wp/ISCC/2021%20ISCC%E4%B8%8A/" title="2021 ISCC竞赛 上篇">2021 ISCC竞赛 上篇</a></span>
+    <span><a href="/2021/02/20/ctf-wp/%E5%AF%92%E5%81%87wp/%E5%AF%92%E5%81%87wp/1/" title="寒假wp">寒假wp</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/CTF/" title="分类于 CTF">CTF</a>
+</div>
+
+    <span><a href="/2021/02/20/ctf-wp/%E5%AF%92%E5%81%87wp/%E5%AF%92%E5%81%87wp/3/" title="寒假wp">寒假wp</a></span>
   </li>
 
       
@@ -441,7 +442,17 @@ The Angel of Lucifer = Mr.Jin成神之路 = Hacker_AZERO TOP 1</title>
 <a href="/categories/CTF/" title="分类于 CTF">CTF</a>
 </div>
 
-    <span><a href="/2021/02/20/ctf-wp/%E5%AF%92%E5%81%87wp/%E5%AF%92%E5%81%87wp/4/" title="寒假wp">寒假wp</a></span>
+    <span><a href="/2021/05/09/ctf-wp/ISCC/2021%20ISCC%E4%B8%8A/" title="2021 ISCC竞赛 上篇">2021 ISCC竞赛 上篇</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/CTF/" title="分类于 CTF">CTF</a>
+</div>
+
+    <span><a href="/2021/02/20/ctf-wp/%E5%AF%92%E5%81%87wp/%E5%AF%92%E5%81%87wp/11/" title="寒假wp">寒假wp</a></span>
   </li>
 
       
@@ -458,20 +469,20 @@ The Angel of Lucifer = Mr.Jin成神之路 = Hacker_AZERO TOP 1</title>
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/CTF/" title="分类于 CTF">CTF</a>
+<a href="/categories/%E6%B1%87%E7%BC%96/" title="分类于 汇编">汇编</a>
 </div>
 
-    <span><a href="/2021/02/20/ctf-wp/%E5%AF%92%E5%81%87wp/%E5%AF%92%E5%81%87wp/14/" title="寒假wp">寒假wp</a></span>
+    <span><a href="/2020/11/28/%E6%B1%87%E7%BC%96/%E6%B1%87%E7%BC%96%E5%AD%A6%E4%B9%A0%E5%85%A5%E9%97%A8/" title="汇编语言入门">汇编语言入门</a></span>
   </li>
 
       
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/CTF/" title="分类于 CTF">CTF</a>
+<a href="/categories/%E5%AF%86%E7%A0%81%E5%AD%A6/" title="分类于 密码学">密码学</a>
 </div>
 
-    <span><a href="/2021/04/07/ctf-wp/%E6%9C%AC%E5%91%A8%E5%8D%9A%E5%AE%A247/%E6%9C%AC%E5%91%A8/" title="本周blog">本周blog</a></span>
+    <span><a href="/2021/05/19/%E5%AF%86%E7%A0%81%E5%AD%A6/RC4/" title="RC4的加解密原理及实现">RC4的加解密原理及实现</a></span>
   </li>
 
   </ul>
